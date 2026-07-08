@@ -16,6 +16,10 @@ import java.util.*;
 public class TwoSum {
 
     public static List<Integer> twoSum(List<Integer> nums, int target) {
+        if (nums == null || nums.size() < 2) {
+            return null;
+        }
+
         Map<Integer, Integer> seen = new HashMap<>();
         for (int i = 0; i < nums.size(); i++) {
             int complement = target - nums.get(i);

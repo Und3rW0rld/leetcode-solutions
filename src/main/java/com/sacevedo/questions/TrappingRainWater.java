@@ -6,6 +6,10 @@ import java.util.Arrays;
 
 public class TrappingRainWater {
     public static int trap(int[] height) {
+        if (height == null || height.length < 2) {
+            return 0;
+        }
+
         int total = 0;
         int maxLeft = height[0];
         int indexLeft = 0;
@@ -27,9 +31,9 @@ public class TrappingRainWater {
         return total;
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         int [] height = {0,1,0,2,1,0,1,3,2,1,2,1};
-        System.out.println(Arrays.toString(height));
-        System.out.println("total: " + trap(height));
+        IO.println(Arrays.toString(height));
+        IO.println("total: " + trap(height));
     }
 }

@@ -13,6 +13,10 @@ import static java.lang.Math.min;
 public class ContainerWithMostWater {
 
     public static int maxArea(int[] height) {
+        if (height == null || height.length < 2) {
+            return 0;
+        }
+
         int a = 0;
         int b = height.length - 1;
         int maxArea = 0;
